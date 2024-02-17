@@ -29,4 +29,4 @@ def load_saved_artifacts():
 if __name__ == '__main__':
     load_saved_artifacts()
     
-    # print(get_estimated_risk(29, 90, 70, 8, 100, 80))
+    print(get_estimated_risk(29, 90, 70, 8, 100, 80))

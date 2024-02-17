@@ -3,7 +3,7 @@ function onClickedEstimateRisk() {
 
     console.log("Estimate risk button clicked");
     
-    var age = document.getElementById('age');
+    var age = document.getElementById("age");
     var sbp = document.getElementById("sbp");
     var dbp = document.getElementById("dbp");
     var sugar = document.getElementById("sugar");
