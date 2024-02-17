@@ -21,7 +21,7 @@ def load_saved_artifacts():
 
     global __model
     if __model is None:
-        with open(r'D:\Documents\Projects\Paris Housing - Copy\server\artifacts\matRisk.pickle', 'rb') as f:
+        with open(r'D:\Documents\Maternal-wellness-system\server\artifacts\matRisk.pickle', 'rb') as f:
             f.seek(0)
             __model = pickle.load(f)
     print("loading saved artifacts...done")

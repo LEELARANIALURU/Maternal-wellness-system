@@ -2,8 +2,9 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import util
 
-application = Flask(__name__, template_folder='D:\Documents\Maternal-wellness-system\client')
+application = Flask(__name__, static_folder='D:\Documents\Maternal-wellness-system\client', template_folder='D:\Documents\Maternal-wellness-system\client')
 application.config['EXPLAIN_TEMPLATE_LOADING'] = True
+application.config['EXPLAIN_STATIC_LOADING'] = True
 CORS(application)
 
 @application.route('/predict_risk', methods=['GET', 'POST'])
