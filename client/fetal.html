@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,30 +16,72 @@
     <br>
     <form class="form">
         <label>Baseline Value:</label>
-        <input type="number" id="baseline" placeholder="Baseline Fetal Heart Rate (FHR)", style="width:200px" />
+        <input type="number" id="baseline" step="0.001" placeholder="Baseline Fetal Heart Rate (FHR)", style="width:200px" />
         <br><br>
         <label>Accelerations</label>
-        <input type="number" id="acc" placeholder="Number of accelerations per second", style="width:250px" />
+        <input type="number" id="accelerations" step="0.001" placeholder="Number of accelerations per second", style="width:250px" />
         <br><br>
         <label>Fetal Movement</label>
-        <input type="number" id="fetal_movement" placeholder="Number of fetal movements per second", style="width:250px" />
+        <input type="number" id="fetal_movement" step="0.001" placeholder="Number of fetal movements per second", style="width:250px" />
         <br><br>
         <label>Uterine Contractions</label>
-        <input type="number" id="uterine_contractions" placeholder="Number of uterine contractions per second", style="width:265px" />
+        <input type="number" id="uterine_contractions" step="0.001" placeholder="Number of uterine contractions per second", style="width:265px" />
         <br><br>
         <label>Light Decelerations</label>
-        <input type="number" id="temp" placeholder="Enter the body temperature of the mother", style="width:260px" />
+        <input type="number" id="light_decelerations" step="0.001" placeholder="Enter the body temperature of the mother", style="width:260px" />
         <br><br>
-        <label>Heart Rate</label>
-        <input type="number" id="heart" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <label>Severe Decelerations</label>
+        <input type="number" id="severe_decelerations" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Prolongued Decelerations</label>
+        <input type="number" id="prolongued_decelerations" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Abnormal Short Term Variability</label>
+        <input type="number" id="abnormal_short_term_variability" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Mean Value of Short Term Variability</label>
+        <input type="number" id="mean_value_of_short_term_variability" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Percentage of Time with Abnormal Long Term Variability</label>
+        <input type="number" id="percentage_of_time_with_abnormal_long_term_variability" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Mean Value of Long Term Variability</label>
+        <input type="number" id="mean_value_of_long_term_variability" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Width</label>
+        <input type="number" id="histogram_width" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Min</label>
+        <input type="number" id="histogram_min" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Max</label>
+        <input type="number" id="histogram_max" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Number of Peaks</label>
+        <input type="number" id="histogram_number_of_peaks" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Mode</label>
+        <input type="number" id="histogram_mode" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>histogram Mean</label>
+        <input type="number" id="histogram_mean" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Median</label>
+        <input type="number" id="histogram_median" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Variance</label>
+        <input type="number" id="histogram_variance" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
+        <br><br>
+        <label>Histogram Tendency</label>
+        <input type="number" id="histogram_tendency" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
         <br><br>
         
         <!-- <input type="submit"> -->
-        <button class="submit" onclick="onClickedEstimateRisk()" type="button">Estimate Risk</button>
+        <button class="submit" onclick="onClickedFetalRisk()" type="button">Estimate Risk</button>
 
     </div>
 </form>
-    <div id="estRisk" class="result">
+    <div id="fetalRisk" class="result">
                 <h2></h2> </div>
     <br>
     <script src="{{ url_for('static', filename='app.js') }}"></script>

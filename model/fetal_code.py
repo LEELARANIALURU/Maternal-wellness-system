@@ -17,6 +17,7 @@ import pandas as pd
 # from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 
 df = pd.read_csv(r'model\fetal_health.csv')
+print(df['fetal_health'].value_counts())
 # df.info()
 
 # df = df.drop_duplicates()
@@ -39,7 +40,7 @@ df = pd.read_csv(r'model\fetal_health.csv')
 
 # df['fetal_health'] = df['fetal_health'].astype(int)
 
-df_features = df.drop(['fetal_health', 'histogram_number_of_zeroes'], axis=1)
+# df_features = df.drop(['fetal_health', 'histogram_number_of_zeroes'], axis=1)
 # df_target = df['fetal_health']
 
 # # split df at 70-30 ratio
@@ -214,10 +215,10 @@ df_features = df.drop(['fetal_health', 'histogram_number_of_zeroes'], axis=1)
 # with open('fetRisk.pickle', 'wb') as f:
 #     pickle.dump(g_boost, f)
 
-import json
-columns = {
-    "data_columns": [col.lower() for col in df_features.columns]
-}
+# import json
+# columns = {
+#     "data_columns": [col.lower() for col in df_features.columns]
+# }
 
-with open('fetal_columns.json', 'w') as f:
-    f.write(json.dumps(columns))
+# with open('fetal_columns.json', 'w') as f:
+#     f.write(json.dumps(columns))
