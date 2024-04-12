@@ -52,11 +52,11 @@ def load_saved_artifacts():
     global __model
     global fetalModel
     if __model is None:
-        with open(r'server\artifacts\matRisk.pickle', 'rb') as f:
+        with open(r'C:\Users\hp\OneDrive\Desktop\Maternal-wellness-system\server\artifacts\matRisk.pickle', 'rb') as f:
             f.seek(0)
             __model = pickle.load(f)
     if fetalModel is None:
-        with open(r'server\artifacts\fetRisk.pickle', 'rb') as f1:
+        with open(r'C:\Users\hp\OneDrive\Desktop\Maternal-wellness-system\server\artifacts\fetRisk.pickle', 'rb') as f1:
             f1.seek(0)
             fetalModel = pickle.load(f1)
     print("loading saved artifacts...done")

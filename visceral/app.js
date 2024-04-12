@@ -3,7 +3,7 @@ function onClickedVisceralFat() {
 
     var age = document.getElementById("age").value;
     var estFat = document.getElementById("estFat");
-    var result = parseInt(age) * 2;
+    var result = parseInt(age) * 2.32;
     estFat.innerHTML = "<h2>" + result + "</h2>";
 }
 

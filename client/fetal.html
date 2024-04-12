@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fetal Health Risk Prediction</title>
+    <title>Fetal Health Risk Classification</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
@@ -10,7 +10,7 @@
   <body>
     <div class="img"></div>
     <div class="heading">
-      <h1>Fetal Risk Prediction</h1>
+      <h1>Fetal Risk Classification</h1>
     </div>
     <div class="content">
     <br>
@@ -63,7 +63,7 @@
         <label>Histogram Mode</label>
         <input type="number" id="histogram_mode" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
         <br><br>
-        <label>histogram Mean</label>
+        <label>Histogram Mean</label>
         <input type="number" id="histogram_mean" step="0.001" placeholder="Enter the heart rate of the mother", style="width:215px" />
         <br><br>
         <label>Histogram Median</label>
@@ -84,6 +84,10 @@
     <div id="fetalRisk" class="result">
                 <h2></h2> </div>
     <br>
+    <h3 align="center"> Risk Levels:</h3>
+    <p align="center">1 - Normal</p>
+    <p align="center">2 - Suspect</p>
+    <p align="center">3 - Pathological</p>
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 
   </body>
